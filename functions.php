@@ -1,9 +1,9 @@
 <?php
 // This function enqueues the Normalize.css for use. The first parameter is a name for the stylesheet, the second is the URL. Here we
 // use an online version of the css file.
-function add_bootstrap_CSS() {
-   
+require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
+function add_bootstrap_CSS() {
    wp_enqueue_style( 'bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/style.css');
    wp_enqueue_script( 'bootstrap-js', "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js",array('jquery'));
@@ -30,9 +30,11 @@ function add_widget_support() {
 }
 // Hook the widget initiation and run our function
 add_action( 'widgets_init', 'add_widget_support' );
- // Register a new navigation menu
+ 
+// Register a new navigation menu
  function add_Main_Nav() {
     register_nav_menu('header-menu',__( 'Header Menu' ));
   }
+  
   // Hook to the init action hook, run our navigation menu function
   add_action( 'init', 'add_Main_Nav' );
