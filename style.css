@@ -13,6 +13,8 @@ body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.428571429;
+    padding:0px;
+    margin:0px;
 }
 main {
   width: 99%;
@@ -20,10 +22,13 @@ main {
 }
 header{
   width: 100%;
+  margin-bottom: 8px;
+  background-color:red
+}
+#pagetitle{
+  width: 100%;
   padding-left: 1%;
   margin-bottom: 8px;
-  background-color: #ddff78;
-  border: 1px solid #78baff;
 }
 
 footer {
