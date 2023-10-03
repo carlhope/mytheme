@@ -8,10 +8,10 @@
  </head>
  <body <?php body_class(); ?>>
    <header>
-    <section class="menu"
-      <div class="container">
+    <section class="menu">
+      
       <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
-  <div class="container">
+      <div class="container-fluid d-flex">
     <!-- Brand and toggle get grouped for better mobile display -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
         <span class="navbar-toggler-icon"></span>
@@ -29,8 +29,8 @@
               'walker'          => new WP_Bootstrap_Navwalker(),
           ) );
             ?>
-                </div>
+            </div>
             </nav> 
-        </div>
+        
       </section>
  </header>
