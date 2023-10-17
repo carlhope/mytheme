@@ -1,5 +1,17 @@
 <footer>
-      <p>Copyright &copy; 2019</p>
+  <div id="footer">
+    <div class="row">
+      <div class ="col-sm-6">
+      <p>Copyright &copy; 2023</p>
+      </div>
+      <div class="col-sm-6">
+        <p>MyTheme</p>
+        </div>
+      </div>
+      <div class="row">
+        <?php wp_nav_menu(array('theme_location' => 'footer-menu')); ?>
+</div>
+    </div>
       <?php wp_footer(); ?>
     </footer>
     
