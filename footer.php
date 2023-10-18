@@ -9,7 +9,12 @@
         </div>
       </div>
       <div class="row">
-        <?php wp_nav_menu(array('theme_location' => 'footer-menu')); ?>
+      <div class="col-sm-6">
+		  <?php wp_nav_menu(array('theme_location' => 'footer-menu-left')); ?>
+</div>
+<div class="col-sm-6">
+        <?php wp_nav_menu(array('theme_location' => 'footer-menu-right')); ?>
+        </div>
 </div>
     </div>
       <?php wp_footer(); ?>

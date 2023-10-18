@@ -31,10 +31,16 @@ function add_widget_support() {
 // Hook the widget initiation and run our function
 add_action( 'widgets_init', 'add_widget_support' );
  
-// Register a new navigation menu
+// Register navigation menus
  function add_Main_Nav() {
     register_nav_menu('header-menu',__( 'Header Menu' ));
+    register_nav_menu('footer-menu-left',__( 'Footer Menu left' ));
+    register_nav_menu('footer-menu-right',__( 'Footer Menu right' ));
+    add_theme_support('menus');
   }
+ 
+	
+  
   
   // Hook to the init action hook, run our navigation menu function
   add_action( 'init', 'add_Main_Nav' );
